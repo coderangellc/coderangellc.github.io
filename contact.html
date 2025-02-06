@@ -82,7 +82,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@coderange.com</p>
+                <p>coderange.llc@gmail.com</p>
               </div>
 
               <div class="phone">
@@ -97,7 +97,11 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formsubmit.co/coderange.llc@gmail.com" method="POST" class="php-email-form">
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="New contact from CodeRange LLC website">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="https://coderangellc.github.io/thank-you.html">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -136,55 +140,33 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-6 footer-contact">
             <h3>CodeRange LLC</h3>
-            <p>
+            <p class="mb-4">
               1210 Astoria Park S <br>
               Astoria, NY 11102<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@coderange.com<br>
+              United States
+            </p>
+            <p class="mb-0">
+              <strong>Email:</strong> 
+              <a href="mailto:coderange.llc@gmail.com" class="text-decoration-none">coderange.llc@gmail.com</a>
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="portfolio.html">Portfolio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Architecture</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Integration</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Connect with us on social media</p>
-            <div class="social-links mt-3">
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <div class="col-lg-4 text-lg-end footer-social">
+            <h4 class="mb-3">Connect With Us</h4>
+            <div class="social-links d-flex justify-content-lg-end">
+              <a href="#" class="linkedin me-2"><i class="bx bxl-linkedin-square fs-3"></i></a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>CodeRange LLC</span></strong>. All Rights Reserved
+      <div class="copyright text-center">
+        &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>CodeRange LLC</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->

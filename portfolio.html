@@ -27,6 +27,24 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .project-header {
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .project-header:hover {
+      background-color: #f8f9fa;
+    }
+    .project-header i {
+      transition: transform 0.3s;
+    }
+    .project-header[aria-expanded="true"] i {
+      transform: rotate(90deg);
+    }
+  </style>
 </head>
 
 <body>
@@ -76,27 +94,39 @@
               <p class="mb-4">Comprehensive Salesforce solutions for one of America's leading telecommunications companies.</p>
               
               <div class="mb-4">
-                <h4 class="text-primary">SMB Billing Operations Project</h4>
-                <p>Development of advanced features for the internal VAR portal on Salesforce Experience Cloud:</p>
-                <ul class="list-unstyled ps-4">
-                  <li>• Created a comprehensive dashboard for router information with MAC address and serial number search functionality</li>
-                  <li>• Implemented extensive integrations with CSML and MuleSoft systems</li>
-                  <li>• Developed and maintained SOAP and REST integration interfaces</li>
-                  <li>• Contributed to multiple trigger and flow updates</li>
-                  <li>• Provided detailed documentation and go-live support</li>
-                </ul>
+                <div class="project-header" data-bs-toggle="collapse" data-bs-target="#smb-project" aria-expanded="false">
+                  <h4 class="text-primary mb-0">
+                    <i class="bx bx-chevron-right"></i> SMB Billing Operations Project
+                  </h4>
+                </div>
+                <div id="smb-project" class="collapse mt-3">
+                  <p>Development of advanced features for the internal VAR portal on Salesforce Experience Cloud:</p>
+                  <ul class="list-unstyled ps-4">
+                    <li>• Created a comprehensive dashboard for router information with MAC address and serial number search functionality</li>
+                    <li>• Implemented extensive integrations with CSML and MuleSoft systems</li>
+                    <li>• Developed and maintained SOAP and REST integration interfaces</li>
+                    <li>• Contributed to multiple trigger and flow updates</li>
+                    <li>• Provided detailed documentation and go-live support</li>
+                  </ul>
+                </div>
               </div>
 
               <div>
-                <h4 class="text-primary">Direct Sales Project</h4>
-                <p>End-to-end development of complex Salesforce features:</p>
-                <ul class="list-unstyled ps-4">
-                  <li>• Built sophisticated opportunity approval process with detailed business logic</li>
-                  <li>• Led the rebuilding of CI/CD pipeline through Git and Azure DevOps</li>
-                  <li>• Developed custom triggers, Apex code, and flows</li>
-                  <li>• Implemented complex integrations with CSML and MuleSoft</li>
-                  <li>• Provided comprehensive documentation and go-live assistance</li>
-                </ul>
+                <div class="project-header" data-bs-toggle="collapse" data-bs-target="#sales-project" aria-expanded="false">
+                  <h4 class="text-primary mb-0">
+                    <i class="bx bx-chevron-right"></i> Direct Sales Project
+                  </h4>
+                </div>
+                <div id="sales-project" class="collapse mt-3">
+                  <p>End-to-end development of complex Salesforce features:</p>
+                  <ul class="list-unstyled ps-4">
+                    <li>• Built sophisticated opportunity approval process with detailed business logic</li>
+                    <li>• Led the rebuilding of CI/CD pipeline through Git and Azure DevOps</li>
+                    <li>• Developed custom triggers, Apex code, and flows</li>
+                    <li>• Implemented complex integrations with CSML and MuleSoft</li>
+                    <li>• Provided comprehensive documentation and go-live assistance</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -110,55 +140,33 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-6 footer-contact">
             <h3>CodeRange LLC</h3>
-            <p>
+            <p class="mb-4">
               1210 Astoria Park S <br>
               Astoria, NY 11102<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@coderange.com<br>
+              United States
+            </p>
+            <p class="mb-0">
+              <strong>Email:</strong> 
+              <a href="mailto:coderange.llc@gmail.com" class="text-decoration-none">coderange.llc@gmail.com</a>
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Consulting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Architecture</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="services.html">Salesforce Integration</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Connect with us on social media</p>
-            <div class="social-links mt-3">
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <div class="col-lg-4 text-lg-end footer-social">
+            <h4 class="mb-3">Connect With Us</h4>
+            <div class="social-links d-flex justify-content-lg-end">
+              <a href="#" class="linkedin me-2"><i class="bx bxl-linkedin-square fs-3"></i></a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>CodeRange LLC</span></strong>. All Rights Reserved
+      <div class="copyright text-center">
+        &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>CodeRange LLC</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
