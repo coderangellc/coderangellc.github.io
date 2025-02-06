@@ -27,6 +27,44 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .credentials-section {
+      margin-top: 20px;
+    }
+    .credential-item {
+      background: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+    .credential-item h5 {
+      color: #37517e;
+      margin-bottom: 5px;
+    }
+    .credential-item .credential-date {
+      color: #777;
+      font-size: 0.9em;
+    }
+    .credential-item .credential-id {
+      font-size: 0.8em;
+      color: #666;
+    }
+    .credentials-toggle {
+      cursor: pointer;
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .credentials-toggle i {
+      transition: transform 0.3s;
+    }
+    .credentials-toggle[aria-expanded="true"] i {
+      transform: rotate(90deg);
+    }
+  </style>
 </head>
 
 <body>
@@ -66,7 +104,7 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Meet Nikola Filip – an experienced Salesforce Developer/Architect with 14 credentials, dedicated to delivering exceptional Salesforce solutions.</p>
+          <p>Meet Nikola Filip – an experienced Salesforce Developer/Architect with 16 credentials, dedicated to delivering exceptional Salesforce solutions.</p>
         </div>
 
         <div class="row">
@@ -77,12 +115,118 @@
               <div class="member-info">
                 <h4>Nikola Filip</h4>
                 <span>Salesforce Developer/Architect</span>
-                <p>An experienced Salesforce expert with 14 credentials, committed to delivering top-notch Salesforce solutions.</p>
+                <p>An experienced Salesforce expert with 16 credentials, committed to delivering top-notch Salesforce solutions.</p>
+                
+                <div class="credentials-section">
+                  <div class="credentials-toggle" data-bs-toggle="collapse" data-bs-target="#credentials-list" aria-expanded="false">
+                    <h4 class="mb-0">
+                      <i class="bx bx-chevron-right"></i> View Certifications & Credentials
+                    </h4>
+                  </div>
+                  
+                  <div id="credentials-list" class="collapse mt-3">
+                    <div class="credential-item">
+                      <h5>Salesforce Certified AI Associate</h5>
+                      <div class="credential-date">Issued Jan 2024</div>
+                      <div class="credential-id">Credential ID: 4088858</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Application Architect</h5>
+                      <div class="credential-date">Issued Mar 2023</div>
+                      <div class="credential-id">Credential ID: 3068985</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Data Architect</h5>
+                      <div class="credential-date">Issued Mar 2023</div>
+                      <div class="credential-id">Credential ID: 3068984</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Platform Developer II</h5>
+                      <div class="credential-date">Issued Mar 2023</div>
+                      <div class="credential-id">Credential ID: 3114681</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Sharing and Visibility Architect</h5>
+                      <div class="credential-date">Issued Nov 2022</div>
+                      <div class="credential-id">Credential ID: 2718628</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Einstein Prediction Builder Accredited Professional</h5>
+                      <div class="credential-date">Issued Sep 2022</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Business Analyst</h5>
+                      <div class="credential-date">Issued Aug 2022</div>
+                      <div class="credential-id">Credential ID: 2518891</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Strategy Designer</h5>
+                      <div class="credential-date">Issued Aug 2022</div>
+                      <div class="credential-id">Credential ID: 2502890</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Copado Certified Fundamentals I</h5>
+                      <div class="credential-date">Issued Mar 2022</div>
+                      <div class="credential-id">Credential ID: 018474</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Net Zero Cloud Accredited Professional</h5>
+                      <div class="credential-date">Issued Mar 2022</div>
+                      <div class="credential-id">Credential ID: 1703257</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified OmniStudio Consultant</h5>
+                      <div class="credential-date">Issued Dec 2021</div>
+                      <div class="credential-id">Credential ID: 22735548</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified User Experience Designer</h5>
+                      <div class="credential-date">Issued Dec 2021</div>
+                      <div class="credential-id">Credential ID: 22787453</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified JavaScript Developer I</h5>
+                      <div class="credential-date">Issued Jun 2021</div>
+                      <div class="credential-id">Credential ID: 22239682</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Administrator</h5>
+                      <div class="credential-date">Issued Mar 2021</div>
+                      <div class="credential-id">Credential ID: 21931573</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Platform App Builder</h5>
+                      <div class="credential-date">Issued Mar 2021</div>
+                      <div class="credential-id">Credential ID: 21963825</div>
+                    </div>
+
+                    <div class="credential-item">
+                      <h5>Salesforce Certified Platform Developer I</h5>
+                      <div class="credential-date">Issued Mar 2021</div>
+                      <div class="credential-id">Credential ID: 21990890</div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="social">
-                  <a href="#"><i class="ri-twitter-fill"></i></a>
-                  <a href="#"><i class="ri-facebook-fill"></i></a>
-                  <a href="#"><i class="ri-instagram-fill"></i></a>
-                  <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                  <a href="https://www.linkedin.com/in/nikolafilip/" target="_blank" class="me-2"><i class="ri-linkedin-box-fill"></i></a>
+                  <a href="https://www.salesforce.com/trailblazer/nfilip" target="_blank" style="display: inline-block; width: 24px; height: 24px;">
+                    <img src="assets/img/trailhead.webp" alt="Trailhead Profile" style="width: 100%; height: 100%; object-fit: contain;">
+                  </a>
                 </div>
               </div>
             </div>
