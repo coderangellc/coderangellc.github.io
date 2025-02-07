@@ -25,6 +25,15 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Add EmailJS SDK in the head section -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Les-88qAAAAANMLQH8VDAQLPrYXZHLE9xP1cxm4"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("7jNXzE0lqU3yD-v_i");
+    })();
+  </script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -97,28 +106,24 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="https://formsubmit.co/coderange.llc@gmail.com" method="POST" class="php-email-form">
-              <!-- FormSubmit configuration -->
-              <input type="hidden" name="_subject" value="New contact from CodeRange LLC website">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://coderangellc.github.io/thank-you.html">
+            <form id="contactForm" class="email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -181,10 +186,54 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- EmailJS Form Handling -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Show loading message
+      this.querySelector('.loading').style.display = 'block';
+      this.querySelector('.error-message').style.display = 'none';
+      this.querySelector('.sent-message').style.display = 'none';
+
+      // Execute reCAPTCHA v3
+      grecaptcha.execute('6Les-88qAAAAANMLQH8VDAQLPrYXZHLE9xP1cxm4', {action: 'submit'})
+        .then(token => {
+          // Get form data
+          const formData = {
+            name: this.querySelector('#name').value,
+            email: this.querySelector('#email').value,
+            subject: this.querySelector('#subject').value,
+            message: this.querySelector('#message').value,
+            'g-recaptcha-response': token
+          };
+
+          return emailjs.send('service_ham66kc', 'template_k500ouj', formData);
+        })
+        .then(() => {
+          // Hide loading and show success message
+          this.querySelector('.loading').style.display = 'none';
+          this.querySelector('.sent-message').style.display = 'block';
+          this.reset();
+          
+          // Redirect to thank you page after a short delay
+          setTimeout(() => {
+            window.location.href = 'thank-you.html';
+          }, 2000);
+        })
+        .catch((error) => {
+          // Hide loading and show error message
+          this.querySelector('.loading').style.display = 'none';
+          this.querySelector('.error-message').textContent = 'Message could not be sent. Please try again later.';
+          this.querySelector('.error-message').style.display = 'block';
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
 
 </body>
 
